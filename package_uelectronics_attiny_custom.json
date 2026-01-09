@@ -19,8 +19,8 @@
           },
           "url": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/releases/download/v3.0.0/devlab_attiny_version_2026-01-09.tar.bz2",
           "archiveFileName": "devlab_attiny_version_2026-01-09.tar.bz2",
-          "checksum": "SHA-256:f4122189283eb8eef1e1dd85cc0d2bfcfdac343f85a9a84b0e315875475e468d",
-          "size": "23702172",
+          "checksum": "SHA-256:5cac50a8132571cea71ab6a8d49b9134408f1b7b1ab92840497e436db02ab81e",
+          "size": "23701630",
           "boards": [
             {
               "name": "ATtiny85"
@@ -35,7 +35,7 @@
               "name": "ATtiny88"
             },
             {
-              "name": "ATtiny88/48 DevLab (USBasp)"
+              "name": "ATtiny88/48 DevLab"
             },
             {
               "name": "ATtiny48"

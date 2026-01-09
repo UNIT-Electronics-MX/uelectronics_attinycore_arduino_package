@@ -96,7 +96,7 @@ attinyx5.name=ATtiny85/45/25 (No Bootloader)
 attinyx61.name=ATtiny861/461/261 (No Bootloader)
 attinyx7.name=ATtiny167/87 (No Bootloader)
 attinyx8.name=ATtiny88/48 (No Bootloader)
-attinyx8devlab.name=ATtiny88/48 DevLab (No Bootloader - USBasp)
+attinyx8devlab.name=ATtiny88/48 DevLab
 attiny1634.name=ATtiny1634 (No Bootloader)
 attinyx313.name=ATtiny4313/2313 (No Bootloader)
 attiny828.name=ATtiny828 (No Bootloader)
@@ -897,8 +897,6 @@ attinyx8devlab.bootloader.tool=avrdude
 attinyx8devlab.build.bootloader=
 attinyx8devlab.build.bootloaderabr=
 attinyx8devlab.bootloader.flashstring=
-attinyx8devlab.program.tool=avrdude
-attinyx8devlab.program.extra_params=-c usbasp
 
 ################################
 # Optimization menu            #
