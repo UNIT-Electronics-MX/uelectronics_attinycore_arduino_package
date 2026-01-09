@@ -1,8 +1,8 @@
 {
   "packages": [
     {
-      "name": "uElectronics ATTiny Core",
-      "maintainer": "UNIT Electronics",
+      "name": "uElectronics_ATTiny_Core",
+      "maintainer": "UNIT_Electronics",
       "websiteURL": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package",
       "email": "",
       "help": {
@@ -10,15 +10,15 @@
       },
       "platforms": [
         {
-          "name": "uElectronics ATTiny Core",
+          "name": "uElectronics_ATTiny_Core",
           "architecture": "avr",
           "version": "3.0.0",
           "category": "Contributed",
           "help": {
             "online": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package"
           },
-          "url": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/releases/download/v3.0.0/devlab_attiny_version_2026-01-07.tar.bz2",
-          "archiveFileName": "devlab_attiny_version_2026-01-07.tar.bz2",
+          "url": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/releases/download/v3.0.0/devlab_attiny_version_2026-01-09.tar.bz2",
+          "archiveFileName": "devlab_attiny_version_2026-01-09.tar.bz2",
           "checksum": "SHA-256:c96128e744ccfb96d3e5d450bab6ca295f7638bf00c0fa0fcf78a67698509a48",
           "size": "23694766",
           "boards": [
