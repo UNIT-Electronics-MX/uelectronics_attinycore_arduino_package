@@ -15,7 +15,7 @@ This is a custom Arduino package based on [ATTinyCore](https://github.com/Spence
 3. In "Additional Boards Manager URLs" add:
 
 ```
-https://raw.githubusercontent.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/refs/heads/v2.0.0-devThis-is-the-head-submit-PRs-against-this/package_uelectronics_attiny_custom.json
+https://raw.githubusercontent.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/refs/heads/main/package_uelectronics_attiny_custom.json
 ```
 
 4. Go to **Tools → Board → Boards Manager**
