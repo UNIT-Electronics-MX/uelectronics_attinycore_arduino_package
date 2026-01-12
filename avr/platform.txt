@@ -157,10 +157,17 @@ tools.avrdude.path={runtime.tools.avrdude.path}
 tools.avrdude.cmd.path={path}/bin/avrdude
 tools.avrdude.config.path={runtime.platform.path}/avrdude.conf
 
+# Default upload parameters - can be overridden in boards.txt
+upload.portparam=-P{serial.port}
+upload.speedparam=-b{upload.speed}
+# Bitclock period in microseconds (slower SCK for low-frequency chips)
+# -B 250 = 4kHz, safe for 128kHz+ chips
+# Increase this value if you still get verification errors
+upload.bitclock=-B 250
 
 tools.avrdude.upload.params.verbose=-v
 tools.avrdude.upload.params.quiet=-q -q
-tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} {upload.portparam} {upload.speedparam} {upload.bitclock} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
 
 tools.avrdude.program.params.verbose=-v
 tools.avrdude.program.params.quiet=-q -q
