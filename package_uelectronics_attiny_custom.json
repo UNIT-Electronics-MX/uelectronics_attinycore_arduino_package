@@ -19,8 +19,8 @@
           },
           "url": "https://github.com/UNIT-Electronics-MX/uelectronics_attinycore_arduino_package/releases/download/v3.0.0/devlab_attiny_version_2026-01-12.tar.bz2",
           "archiveFileName": "devlab_attiny_version_2026-01-12.tar.bz2",
-          "checksum": "SHA-256:a6975ac8af34bfe312997281423dd97b790c222918518bd834c81079da737b0a",
-          "size": "23715131",
+          "checksum": "SHA-256:8d59d71487a3d288369926f15095d67dd891be43a7a1a9a81554e94f337c245a",
+          "size": "23715657",
           "boards": [
             {
               "name": "ATtiny85"

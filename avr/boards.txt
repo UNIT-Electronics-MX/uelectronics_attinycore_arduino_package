@@ -79,6 +79,9 @@ menu.usbpins=Micronucleus USB Pins (set on bootload, must match hardware)
 menu.burnmode=Burn Bootloader Method
 menu.resetpin=Reset Pin (Only set on bootload via ISP)
 
+# Specific to DevLab boards with USBasp:
+menu.uploadspeed=Upload Speed (SCK frequency)
+
 # All parts, at the bottom
 menu.optimization="Compiler optimization flags"
 #______________________________________________________________________________#
@@ -938,6 +941,18 @@ attinyx5devlab.menu.millis.disabled=Disabled (saves flash)
 attinyx5devlab.menu.millis.disabled.build.millis=-DDISABLEMILLIS
 attinyx5devlab.menu.millis.disabled.build.millisabr=mNONE
 
+################################
+# Upload Speed menu (USBasp)   #
+################################
+attinyx5devlab.menu.uploadspeed.slow=Slow (4kHz SCK, safe for all clocks)
+attinyx5devlab.menu.uploadspeed.slow.upload.bitclock=-B 250
+attinyx5devlab.menu.uploadspeed.medium=Medium (32kHz SCK)
+attinyx5devlab.menu.uploadspeed.medium.upload.bitclock=-B 31
+attinyx5devlab.menu.uploadspeed.fast=Fast (100kHz SCK, 1MHz+ clock)
+attinyx5devlab.menu.uploadspeed.fast.upload.bitclock=-B 10
+attinyx5devlab.menu.uploadspeed.veryfast=Very Fast (400kHz SCK, 8MHz+ clock)
+attinyx5devlab.menu.uploadspeed.veryfast.upload.bitclock=-B 2.5
+
 
 #*******************************************************************************
 #   ###  #####                           ###
@@ -1354,6 +1369,18 @@ attinyx8devlab.menu.millis.enabled.build.millisabr=
 attinyx8devlab.menu.millis.disabled=Disabled (saves flash)
 attinyx8devlab.menu.millis.disabled.build.millis=-DDISABLEMILLIS
 attinyx8devlab.menu.millis.disabled.build.millisabr=mNONE
+
+################################
+# Upload Speed menu (USBasp)   #
+################################
+attinyx8devlab.menu.uploadspeed.veryfast=Very Fast (400kHz SCK, recommended)
+attinyx8devlab.menu.uploadspeed.veryfast.upload.bitclock=-B 2.5
+attinyx8devlab.menu.uploadspeed.fast=Fast (100kHz SCK)
+attinyx8devlab.menu.uploadspeed.fast.upload.bitclock=-B 10
+attinyx8devlab.menu.uploadspeed.medium=Medium (32kHz SCK)
+attinyx8devlab.menu.uploadspeed.medium.upload.bitclock=-B 31
+attinyx8devlab.menu.uploadspeed.slow=Slow (4kHz SCK, for low clock speeds)
+attinyx8devlab.menu.uploadspeed.slow.upload.bitclock=-B 250
 
 
 #*******************************************************************************
