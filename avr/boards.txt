@@ -93,10 +93,11 @@ menu.optimization="Compiler optimization flags"
 attinyx4.name=ATtiny84/44/24 (No Bootloader)
 attinyx41.name=ATtiny841/441 (No Bootloader)
 attinyx5.name=ATtiny85/45/25 (No Bootloader)
+attinyx5devlab.name=ATtiny85/45/25 DevLab SUPPORT (USBasp)
 attinyx61.name=ATtiny861/461/261 (No Bootloader)
 attinyx7.name=ATtiny167/87 (No Bootloader)
 attinyx8.name=ATtiny88/48 (No Bootloader)
-attinyx8devlab.name=ATtiny88/48 DevLab (USBasp)
+attinyx8devlab.name=ATtiny88/48 DevLab SUPPORT (USBasp)
 attiny1634.name=ATtiny1634 (No Bootloader)
 attinyx313.name=ATtiny4313/2313 (No Bootloader)
 attiny828.name=ATtiny828 (No Bootloader)
@@ -661,6 +662,275 @@ attinyx5.menu.millis.enabled.build.millisabr=
 attinyx5.menu.millis.disabled=Disabled (saves flash)
 attinyx5.menu.millis.disabled.build.millis=-DDISABLEMILLIS
 attinyx5.menu.millis.disabled.build.millisabr=mNONE
+
+
+#*******************************************************************************
+#   ###  #####                          ####                           ###                  ###
+#  #   #   #    #  #                    #                                #                    #
+#  #####   #   ###    ###  #  #     # # ###                             #                    #
+#  #   #   #    #  #  #  # #  #      #     #                            #                    #
+#  #   #   #    #  #  #  #  ###     # # ###  DevLab with USBasp         #     ####   ###     #
+#_____________________________#____________________________________________________#_______________
+                           ###
+
+
+attinyx5devlab.build.board=AVR_ATTINYX5
+attinyx5devlab.build.core=tiny
+attinyx5devlab.build.variant=tinyx5
+attinyx5devlab.build.export_merged_output=false
+attinyx5devlab.bootloader.extended_fuses=0xFE
+attinyx5devlab.bootloader.high_fuses=0b{bootloader.rstbit}101{bootloader.eesave_bit}{bootloader.bod_bits}
+attinyx5devlab.bootloader.rstbit=1
+attinyx5devlab.build.usbpinset=
+attinyx5devlab.build.tuneorcal=
+attinyx5devlab.build.softserabr=
+attinyx5devlab.build.softser=
+attinyx5devlab.build.wiremodeabr=
+attinyx5devlab.build.wiremode=
+attinyx5devlab.build.pinmapabr=
+attinyx5devlab.build.remap=
+attinyx5devlab.build.remapabr=
+attinyx5devlab.upload.tool=avrdude
+attinyx5devlab.upload.protocol=usbasp
+attinyx5devlab.program.tool=avrdude
+attinyx5devlab.program.protocol=usbasp
+attinyx5devlab.bootloader.tool=avrdude
+attinyx5devlab.build.bootloader=
+attinyx5devlab.build.bootloaderabr=
+attinyx5devlab.bootloader.flashstring=
+
+################################
+# Optimization menu            #
+################################
+attinyx5devlab.menu.optimization.size=-Os (size, recommended)
+attinyx5devlab.menu.optimization.othree=-O3 (speed)
+attinyx5devlab.menu.optimization.debug=-Og (for advanced debugging)
+attinyx5devlab.menu.optimization.size.build.optimize=-Os
+attinyx5devlab.menu.optimization.othree.build.optimize=-O3
+attinyx5devlab.menu.optimization.debug.build.optimize=-Og
+
+################################
+# Microcontroller menu         #
+################################
+attinyx5devlab.menu.chip.85=ATtiny85
+attinyx5devlab.menu.chip.85.build.mcu=attiny85
+attinyx5devlab.menu.chip.85.upload.maximum_size=8192
+attinyx5devlab.menu.chip.85.upload.maximum_data_size=512
+attinyx5devlab.menu.chip.45=ATtiny45
+attinyx5devlab.menu.chip.45.build.mcu=attiny45
+attinyx5devlab.menu.chip.45.upload.maximum_size=4096
+attinyx5devlab.menu.chip.45.upload.maximum_data_size=256
+attinyx5devlab.menu.chip.25=ATtiny25
+attinyx5devlab.menu.chip.25.build.mcu=attiny25
+attinyx5devlab.menu.chip.25.upload.maximum_size=2048
+attinyx5devlab.menu.chip.25.upload.maximum_data_size=128
+
+################################
+# Clocking menu options        #
+################################
+attinyx5devlab.menu.clock.internal_8m=8 MHz (internal)
+attinyx5devlab.menu.clock.internal_8m.bootloader.low_fuses=0xE2
+attinyx5devlab.menu.clock.internal_8m.build.f_cpu=8000000UL
+attinyx5devlab.menu.clock.internal_8m.build.speed=8m
+attinyx5devlab.menu.clock.internal_8m.build.clocksource=0
+attinyx5devlab.menu.clock.internal_1m=1 MHz (internal)
+attinyx5devlab.menu.clock.internal_1m.bootloader.low_fuses=0x62
+attinyx5devlab.menu.clock.internal_1m.build.f_cpu=1000000UL
+attinyx5devlab.menu.clock.internal_1m.build.speed=1m
+attinyx5devlab.menu.clock.internal_1m.build.clocksource=0x10
+attinyx5devlab.menu.clock.internal_4m=4 MHz (internal)
+attinyx5devlab.menu.clock.internal_4m.bootloader.low_fuses=0x62
+attinyx5devlab.menu.clock.internal_4m.build.f_cpu=4000000UL
+attinyx5devlab.menu.clock.internal_4m.build.speed=4m
+attinyx5devlab.menu.clock.internal_4m.build.clocksource=0x10
+attinyx5devlab.menu.clock.internal_4m.bootloader.f_cpu=1000000UL
+attinyx5devlab.menu.clock.internal_2m=2 MHz (internal)
+attinyx5devlab.menu.clock.internal_2m.bootloader.low_fuses=0x62
+attinyx5devlab.menu.clock.internal_2m.build.f_cpu=2000000UL
+attinyx5devlab.menu.clock.internal_2m.build.speed=2m
+attinyx5devlab.menu.clock.internal_2m.build.clocksource=0x10
+attinyx5devlab.menu.clock.internal_2m.bootloader.f_cpu=1000000UL
+attinyx5devlab.menu.clock.pll_16m=16 MHz (PLL)
+attinyx5devlab.menu.clock.pll_16m.bootloader.low_fuses=0xF1
+attinyx5devlab.menu.clock.pll_16m.build.f_cpu=16000000UL
+attinyx5devlab.menu.clock.pll_16m.build.speed=16m
+attinyx5devlab.menu.clock.pll_16m.build.clocksource=6
+attinyx5devlab.menu.clock.pll_16m5=16.5 MHz (PLL, tweaked)
+attinyx5devlab.menu.clock.pll_16m5.bootloader.low_fuses=0xF1
+attinyx5devlab.menu.clock.pll_16m5.build.f_cpu=16500000UL
+attinyx5devlab.menu.clock.pll_16m5.build.speed=16m5
+attinyx5devlab.menu.clock.pll_16m5.build.clocksource=6
+attinyx5devlab.menu.clock.pll_16m5.bootloader.f_cpu=16000000UL
+attinyx5devlab.menu.clock.crystal_16m=16 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_16m.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_16m.build.f_cpu=16000000UL
+attinyx5devlab.menu.clock.crystal_16m.build.speed=16m
+attinyx5devlab.menu.clock.crystal_16m.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_8m=8 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_8m.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_8m.build.f_cpu=8000000UL
+attinyx5devlab.menu.clock.crystal_8m.build.speed=8m
+attinyx5devlab.menu.clock.crystal_8m.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_20m=20 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_20m.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_20m.build.f_cpu=20000000UL
+attinyx5devlab.menu.clock.crystal_20m.build.speed=20m
+attinyx5devlab.menu.clock.crystal_20m.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_12m=12 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_12m.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_12m.build.f_cpu=12000000UL
+attinyx5devlab.menu.clock.crystal_12m.build.speed=12m
+attinyx5devlab.menu.clock.crystal_12m.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_6m=6 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_6m.bootloader.low_fuses=0xFD
+attinyx5devlab.menu.clock.crystal_6m.build.f_cpu=6000000UL
+attinyx5devlab.menu.clock.crystal_6m.build.speed=6m
+attinyx5devlab.menu.clock.crystal_6m.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_18432k=18.432 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_18432k.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_18432k.build.f_cpu=18432000UL
+attinyx5devlab.menu.clock.crystal_18432k.build.speed=18432k
+attinyx5devlab.menu.clock.crystal_18432k.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_14746k=14.746 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_14746k.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_14746k.build.f_cpu=14746000UL
+attinyx5devlab.menu.clock.crystal_14746k.build.speed=14746k
+attinyx5devlab.menu.clock.crystal_14746k.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_11059k=11.059 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_11059k.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_11059k.build.f_cpu=11059000UL
+attinyx5devlab.menu.clock.crystal_11059k.build.speed=11059k
+attinyx5devlab.menu.clock.crystal_11059k.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_9216k=9.216 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_9216k.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_9216k.build.f_cpu=9216000UL
+attinyx5devlab.menu.clock.crystal_9216k.build.speed=9216k
+attinyx5devlab.menu.clock.crystal_9216k.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_7372k=7.372 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_7372k.bootloader.low_fuses=0xFD
+attinyx5devlab.menu.clock.crystal_7372k.build.f_cpu=7372000UL
+attinyx5devlab.menu.clock.crystal_7372k.build.speed=7372k
+attinyx5devlab.menu.clock.crystal_7372k.build.clocksource=1
+attinyx5devlab.menu.clock.crystal_3686k=3.686 MHz (crystal)
+attinyx5devlab.menu.clock.crystal_3686k.bootloader.low_fuses=0xFF
+attinyx5devlab.menu.clock.crystal_3686k.build.f_cpu=3686000UL
+attinyx5devlab.menu.clock.crystal_3686k.build.speed=3686k
+attinyx5devlab.menu.clock.crystal_3686k.build.clocksource=1
+attinyx5devlab.menu.clock.internal_12m=12 MHz (internal, tuned)
+attinyx5devlab.menu.clock.internal_12m.bootloader.low_fuses=0xE2
+attinyx5devlab.menu.clock.internal_12m.build.f_cpu=12000000UL
+attinyx5devlab.menu.clock.internal_12m.build.speed=12m
+attinyx5devlab.menu.clock.internal_12m.build.clocksource=0
+attinyx5devlab.menu.clock.internal_12m.bootloader.f_cpu=8000000
+attinyx5devlab.menu.clock.internal_12m8=12.8 MHz (internal, tuned)
+attinyx5devlab.menu.clock.internal_12m8.bootloader.low_fuses=0xE2
+attinyx5devlab.menu.clock.internal_12m8.build.f_cpu=12800000L
+attinyx5devlab.menu.clock.internal_12m8.build.speed=12m
+attinyx5devlab.menu.clock.internal_12m8.build.clocksource=0
+attinyx5devlab.menu.clock.internal_12m8.bootloader.f_cpu=8000000
+attinyx5devlab.menu.clock.internal_8m_tuned=8 MHz (internal, tuned)
+attinyx5devlab.menu.clock.internal_8m_tuned.bootloader.low_fuses=0xE2
+attinyx5devlab.menu.clock.internal_8m_tuned.build.f_cpu=8000000UL
+attinyx5devlab.menu.clock.internal_8m_tuned.build.speed=8m
+attinyx5devlab.menu.clock.internal_8m_tuned.build.clocksource=0
+attinyx5devlab.menu.clock.internal_128k=128 kHz (internal WDT)
+attinyx5devlab.menu.clock.internal_128k.build.f_cpu=128000L
+attinyx5devlab.menu.clock.internal_128k.build.speed=128k
+attinyx5devlab.menu.clock.internal_128k.build.clocksource=3
+attinyx5devlab.menu.clock.internal_128k.bootloader.low_fuses=0xC4
+attinyx5devlab.menu.clock.extclk_16m=16 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_16m.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_16m.build.f_cpu=16000000UL
+attinyx5devlab.menu.clock.extclk_16m.build.speed=16m
+attinyx5devlab.menu.clock.extclk_16m.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_8m=8 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_8m.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_8m.build.f_cpu=8000000UL
+attinyx5devlab.menu.clock.extclk_8m.build.speed=8m
+attinyx5devlab.menu.clock.extclk_8m.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_20m=20 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_20m.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_20m.build.f_cpu=20000000UL
+attinyx5devlab.menu.clock.extclk_20m.build.speed=20m
+attinyx5devlab.menu.clock.extclk_20m.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_12m=12 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_12m.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_12m.build.f_cpu=12000000UL
+attinyx5devlab.menu.clock.extclk_12m.build.speed=12m
+attinyx5devlab.menu.clock.extclk_12m.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_6m=6 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_6m.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_6m.build.f_cpu=6000000UL
+attinyx5devlab.menu.clock.extclk_6m.build.speed=6m
+attinyx5devlab.menu.clock.extclk_6m.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_18432k=18.432 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_18432k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_18432k.build.f_cpu=18432000UL
+attinyx5devlab.menu.clock.extclk_18432k.build.speed=18432k
+attinyx5devlab.menu.clock.extclk_18432k.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_14746k=14.746 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_14746k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_14746k.build.f_cpu=14746000UL
+attinyx5devlab.menu.clock.extclk_14746k.build.speed=14746k
+attinyx5devlab.menu.clock.extclk_14746k.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_11059k=11.059 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_11059k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_11059k.build.f_cpu=11059000UL
+attinyx5devlab.menu.clock.extclk_11059k.build.speed=11059k
+attinyx5devlab.menu.clock.extclk_11059k.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_9216k=9.216 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_9216k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_9216k.build.f_cpu=9216000UL
+attinyx5devlab.menu.clock.extclk_9216k.build.speed=9216k
+attinyx5devlab.menu.clock.extclk_9216k.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_7372k=7.372 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_7372k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_7372k.build.f_cpu=7372000UL
+attinyx5devlab.menu.clock.extclk_7372k.build.speed=7372k
+attinyx5devlab.menu.clock.extclk_7372k.build.clocksource=2
+attinyx5devlab.menu.clock.extclk_3686k=3.686 MHz (external clock)
+attinyx5devlab.menu.clock.extclk_3686k.bootloader.low_fuses=0xE0
+attinyx5devlab.menu.clock.extclk_3686k.build.f_cpu=3686000UL
+attinyx5devlab.menu.clock.extclk_3686k.build.speed=3686k
+attinyx5devlab.menu.clock.extclk_3686k.build.clocksource=2
+
+################################
+# Retain EEPROM menu           #
+################################
+attinyx5devlab.menu.eesave.aenable=EEPROM retained
+attinyx5devlab.menu.eesave.aenable.bootloader.eesave_bit=0
+attinyx5devlab.menu.eesave.disable=EEPROM not retained
+attinyx5devlab.menu.eesave.disable.bootloader.eesave_bit=1
+
+################################
+# Software Serial menu         #
+################################
+attinyx5devlab.menu.softserial.enable=RX on PB1, TX on PB (default PB0)
+attinyx5devlab.menu.softserial.txonly=No receiving, transmit only.
+attinyx5devlab.menu.softserial.txonly.build.softser=-DSOFT_TX_ONLY
+attinyx5devlab.menu.softserial.txonly.build.softserabr=ssTX
+
+################################
+# BrownOut Detect menu         #
+################################
+attinyx5devlab.menu.bod.disable=B.O.D. Disabled (saves power)
+attinyx5devlab.menu.bod.disable.bootloader.bod_bits=111
+attinyx5devlab.menu.bod.1v8=B.O.D. Enabled (1.8v)
+attinyx5devlab.menu.bod.1v8.bootloader.bod_bits=110
+attinyx5devlab.menu.bod.2v7=B.O.D. Enabled (2.7v)
+attinyx5devlab.menu.bod.2v7.bootloader.bod_bits=101
+attinyx5devlab.menu.bod.4v3=B.O.D. Enabled (4.3v)
+attinyx5devlab.menu.bod.4v3.bootloader.bod_bits=100
+
+################################
+# millis/micros menu           #
+################################
+attinyx5devlab.menu.millis.enabled=Enabled
+attinyx5devlab.menu.millis.enabled.build.millis=
+attinyx5devlab.menu.millis.enabled.build.millisabr=
+attinyx5devlab.menu.millis.disabled=Disabled (saves flash)
+attinyx5devlab.menu.millis.disabled.build.millis=-DDISABLEMILLIS
+attinyx5devlab.menu.millis.disabled.build.millisabr=mNONE
 
 
 #*******************************************************************************
