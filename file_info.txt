@@ -1,5 +1,5 @@
 Nombre del archivo comprimido: devlab_attiny_version_2026-01-12.tar.bz2
 Datos del archivo comprimido:
-Tamaño del archivo: 23710725 bytes
+Tamaño del archivo: 23710017 bytes
 Tipo de archivo: bz2
-SHA256 del archivo: 3d0b0b27693d79e48ae985053c99e6640026de9184784373cd39972356ac7c7f
+SHA256 del archivo: 03012ae1c3d6b83c460ab6d6f2304f889974fdc0f3ade564409bf0caa0e89ffc
